@@ -22,14 +22,14 @@
    </url>
 
   <requires>
-  	  <import plugin="org.eclipse.platform" version="2.0.1" match="compatible" />
+  	  <import plugin="org.eclipse.platform" version="2.0.3" match="compatible" />
   </requires>
   
    <plugin
          id="org.eclipse.jdt"
          download-size="0"
          install-size="0"
-         version="2.0.2">
+         version="2.0.3">
    </plugin>
 
    <plugin
