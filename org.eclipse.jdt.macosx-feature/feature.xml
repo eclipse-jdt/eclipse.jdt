@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.jdt.macosx"
       label="%featureName"
-      version="2.1.0"
+      version="2.0.2"
       image= "eclipse_update_120.jpg"
       provider-name="%providerName"
       os="macosx"
@@ -24,7 +24,7 @@
       </update>
    </url>
 
-   <plugin id="org.eclipse.jdt.macosx" version="2.1.0"/>
-   <plugin id="org.eclipse.jdt.launching.macosx" version="2.1.0"/>
+   <plugin id="org.eclipse.jdt.macosx" version="2.0.2"/>
+   <plugin id="org.eclipse.jdt.launching.macosx" version="2.0.2"/>
    
  </feature>
