@@ -57,7 +57,7 @@
          id="org.eclipse.jdt.junit"
          download-size="0"
          install-size="0"
-         version="2.0.0">
+         version="2.0.1">
    </plugin>
 
    <plugin
@@ -71,7 +71,7 @@
          id="org.eclipse.jdt.ui"
          download-size="0"
          install-size="0"
-         version="2.0.0">
+         version="2.0.1">
    </plugin>
 
    <plugin
