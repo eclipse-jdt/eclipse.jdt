@@ -20,7 +20,7 @@
    </url>
 
   <requires>
-      <import plugin="org.eclipse.platform" version="3.0.0" match="compatible" />
+      <import plugin="org.eclipse.platform" version="3.0.1" match="compatible" />
   </requires>
   
    <plugin
