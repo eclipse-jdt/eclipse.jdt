@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- CVS test, ignore                                                                -->
 <feature
       id="org.eclipse.jdt.source"
       label="%featureName"
