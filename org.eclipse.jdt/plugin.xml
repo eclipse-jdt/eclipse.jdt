@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin
-  name="%pluginName"
-  id="org.eclipse.jdt"
-  version="2.1.0"
-  provider-name="%providerName">
+   id="org.eclipse.jdt"
+   name="%pluginName"
+   version="2.1.2"
+   provider-name="%providerName">
+
+   <runtime>
+   </runtime>
+
 </plugin>
