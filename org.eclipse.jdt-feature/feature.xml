@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.jdt"
       label="%featureName"
-      version="2.1.0"
+      version="2.1.1"
       image= "eclipse_update_120.jpg"
       provider-name="%providerName">
 
@@ -22,28 +22,28 @@
    </url>
 
   <requires>
-  	  <import plugin="org.eclipse.platform" version="2.1.0" match="compatible" />
+  	  <import plugin="org.eclipse.platform" version="2.1.1" match="compatible" />
   </requires>
   
    <plugin
          id="org.eclipse.jdt"
          download-size="0"
          install-size="0"
-         version="2.1.0">
+         version="2.1.1">
    </plugin>
 
    <plugin
          id="org.eclipse.jdt.core"
          download-size="0"
          install-size="0"
-         version="2.1.0">
+         version="2.1.1">
    </plugin>
 
    <plugin
          id="org.eclipse.jdt.debug.ui"
          download-size="0"
          install-size="0"
-         version="2.1.0">
+         version="2.1.1">
    </plugin>
 
    <plugin
@@ -57,21 +57,21 @@
          id="org.eclipse.jdt.junit"
          download-size="0"
          install-size="0"
-         version="2.1.0">
+         version="2.1.1">
    </plugin>
 
    <plugin
          id="org.eclipse.jdt.launching"
          download-size="0"
          install-size="0"
-         version="2.1.0">
+         version="2.1.1">
    </plugin>
 
    <plugin
          id="org.eclipse.jdt.ui"
          download-size="0"
          install-size="0"
-         version="2.1.0">
+         version="2.1.1">
    </plugin>
 
    <plugin
