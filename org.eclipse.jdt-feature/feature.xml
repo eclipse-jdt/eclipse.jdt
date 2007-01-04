@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.jdt"
       label="%featureName"
-      version="3.2.1.qualifier"
+      version="3.2.2.qualifier"
       provider-name="%providerName"
       image="eclipse_update_120.jpg">
 
@@ -96,7 +96,7 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-         
+
    <plugin
          id="org.eclipse.jdt.launching"
          download-size="0"
@@ -122,7 +122,7 @@
          download-size="0"
          install-size="0"
          version="0.0.0"/>
-         
+
    <plugin
          id="org.eclipse.jdt.doc.user"
          download-size="0"
