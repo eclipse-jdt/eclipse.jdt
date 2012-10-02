@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.jdt"
       label="%featureName"
-      version="3.8.1.qualifier"
+      version="3.8.2.qualifier"
       provider-name="%providerName"
       image="eclipse_update_120.jpg"
       license-feature="org.eclipse.license"
@@ -21,7 +21,7 @@
    </license>
 
    <requires>
-      <import feature="org.eclipse.platform" version="3.8.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.platform" version="3.8.1" match="greaterOrEqual"/>
    </requires>
 
    <plugin
