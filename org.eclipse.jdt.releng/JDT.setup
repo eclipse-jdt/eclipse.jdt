@@ -93,7 +93,7 @@
       <repositoryList
           name="CBI">
         <repository
-            url="http://download.eclipse.org/cbi/updates/license"/>
+            url="https://download.eclipse.org/cbi/updates/license"/>
       </repositoryList>
     </targlet>
   </setupTask>
