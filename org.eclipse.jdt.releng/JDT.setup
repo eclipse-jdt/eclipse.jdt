@@ -101,14 +101,14 @@
       label="Features">
     <setupTask
         xsi:type="git:GitCloneTask"
-        id="git.clone.jdt"
-        remoteURI="jdt/eclipse.jdt"
+        id="github.clone.jdt"
+        remoteURI="eclipse-jdt/eclipse.jdt"
         userID="">
       <annotation
           source="http://www.eclipse.org/oomph/setup/InducedChoices">
         <detail
             key="inherit">
-          <value>eclipse.git.gerrit.remoteURIs</value>
+          <value>github.remoteURIs</value>
         </detail>
         <detail
             key="label">
@@ -119,12 +119,6 @@
           <value>remoteURI</value>
         </detail>
       </annotation>
-      <configSections
-          name="gerrit">
-        <properties
-            key="createchangeid"
-            value="true"/>
-      </configSections>
       <description>JDT Features</description>
     </setupTask>
     <setupTask
@@ -135,11 +129,12 @@
         <requirement
             name="*"/>
         <sourceLocator
-            rootFolder="${git.clone.jdt.location}"/>
+            rootFolder="${github.clone.jdt.location}"/>
       </targlet>
     </setupTask>
     <setupTask
-        xsi:type="setup.workingsets:WorkingSetTask">
+        xsi:type="setup.workingsets:WorkingSetTask"
+        id="jdt.workingsets">
       <workingSet
           name="JDT Features">
         <predicate
@@ -150,7 +145,7 @@
     <setupTask
         xsi:type="setup:EclipseIniTask"
         option="-Doomph.redirection.jdt"
-        value="=https://git.eclipse.org/c/jdt/eclipse.jdt.git/plain/org.eclipse.jdt.releng/JDT.setup->${git.clone.jdt.location|uri}/org.eclipse.jdt.releng/JDT.setup"
+        value="=https://raw.githubusercontent.com/eclipse-jdt/eclipse.jdt/master/org.eclipse.jdt.releng/JDT.setup->${github.clone.jdt.location|uri}/org.eclipse.jdt.releng/JDT.setup"
         vm="true">
       <description>Set an Oomph redirection system property to redirect the logical location of this setup to its physical location in the Git clone.</description>
     </setupTask>
@@ -204,7 +199,8 @@
       </targlet>
     </setupTask>
     <setupTask
-        xsi:type="setup.workingsets:WorkingSetTask">
+        xsi:type="setup.workingsets:WorkingSetTask"
+        id="jdt.core.workingsets">
       <workingSet
           name="JDT Core">
         <predicate
@@ -240,7 +236,8 @@
         </targlet>
       </setupTask>
       <setupTask
-          xsi:type="setup.workingsets:WorkingSetTask">
+          xsi:type="setup.workingsets:WorkingSetTask"
+          id="jdt.core.tests.workingsets">
         <workingSet
             name="JDT Core Tests">
           <predicate
@@ -300,7 +297,8 @@
         </targlet>
       </setupTask>
       <setupTask
-          xsi:type="setup.workingsets:WorkingSetTask">
+          xsi:type="setup.workingsets:WorkingSetTask"
+          id="jdt.core.binaries.workingsets">
         <workingSet
             name="JDT Core Test Binaries">
           <predicate
@@ -366,7 +364,8 @@
       </targlet>
     </setupTask>
     <setupTask
-        xsi:type="setup.workingsets:WorkingSetTask">
+        xsi:type="setup.workingsets:WorkingSetTask"
+        id="jdt.debug.workingsets">
       <workingSet
           name="JDT Debug">
         <predicate
@@ -402,7 +401,8 @@
         </targlet>
       </setupTask>
       <setupTask
-          xsi:type="setup.workingsets:WorkingSetTask">
+          xsi:type="setup.workingsets:WorkingSetTask"
+          id="jdt.debug.tests.workingsets">
         <workingSet
             name="JDT Debug Tests">
           <predicate
@@ -468,7 +468,8 @@
       </targlet>
     </setupTask>
     <setupTask
-        xsi:type="setup.workingsets:WorkingSetTask">
+        xsi:type="setup.workingsets:WorkingSetTask"
+        id="jdt.ui.workingsets">
       <workingSet
           name="JDT UI">
         <predicate
@@ -503,7 +504,8 @@
         </targlet>
       </setupTask>
       <setupTask
-          xsi:type="setup.workingsets:WorkingSetTask">
+          xsi:type="setup.workingsets:WorkingSetTask"
+          id="jdt.ui.tests.workingsets">
         <workingSet
             name="JDT UI Tests">
           <predicate
@@ -535,7 +537,8 @@
         </targlet>
       </setupTask>
       <setupTask
-          xsi:type="setup.workingsets:WorkingSetTask">
+          xsi:type="setup.workingsets:WorkingSetTask"
+          id="jdt.ui.examples.workingsets">
         <workingSet
             name="JDT UI Examples">
           <predicate
