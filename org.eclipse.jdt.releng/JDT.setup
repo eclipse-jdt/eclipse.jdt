@@ -260,13 +260,13 @@
         label="Test Binaries">
       <setupTask
           xsi:type="git:GitCloneTask"
-          id="git.clone.jdt.binaries"
-          remoteURI="jdt/eclipse.jdt.core.binaries">
+          id="github.clone.jdt.binaries"
+          remoteURI="eclipse-jdt/eclipse.jdt.core.binaries">
         <annotation
             source="http://www.eclipse.org/oomph/setup/InducedChoices">
           <detail
               key="inherit">
-            <value>eclipse.git.gerrit.remoteURIs</value>
+            <value>github.remoteURIs</value>
           </detail>
           <detail
               key="label">
@@ -277,12 +277,6 @@
             <value>remoteURI</value>
           </detail>
         </annotation>
-        <configSections
-            name="gerrit">
-          <properties
-              key="createchangeid"
-              value="true"/>
-        </configSections>
         <description>JDT Core Tests</description>
       </setupTask>
       <setupTask
@@ -293,7 +287,7 @@
           <requirement
               name="org.eclipse.jdt.core.tests.binaries"/>
           <sourceLocator
-              rootFolder="${git.clone.jdt.binaries.location}"/>
+              rootFolder="${github.clone.jdt.binaries.location}"/>
         </targlet>
       </setupTask>
       <setupTask
