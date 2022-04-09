@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Configuration
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    label="JDT">
+  <annotation
+      source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+    <detail
+        key="imageURI">
+      <value>https://www.eclipse.org/downloads/images/committers.png</value>
+    </detail>
+    <detail
+        key="badgeLabel">
+      <value>JDT</value>
+    </detail>
+  </annotation>
+  <installation
+      name="jdt.installation"
+      label="JDT Installation">
+    <setupTask
+        xsi:type="setup:VariableTask"
+        name="installation.id.default"
+        value="jdt"/>
+    <productVersion
+        href="index:/org.eclipse.setup#//@productCatalogs[name='org.eclipse.applications']/@products[name='eclipse.platform.sdk']/@versions[name='latest']"/>
+    <description>The JDT installation provides the latest tools needed to work with the Java Develop Tools's source code.</description>
+  </installation>
+  <workspace
+      name="jdt.workspace"
+      label="JDT Workspace">
+    <stream
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='jdt']/@projects[name='core']/@projects[name='testbinaries']/@streams[name='master']"/>
+    <stream
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='jdt']/@projects[name='core']/@projects[name='tests']/@streams[name='master']"/>
+    <stream
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='jdt']/@projects[name='core']/@streams[name='master']"/>
+    <stream
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='jdt']/@projects[name='debug']/@projects[name='tests']/@streams[name='master']"/>
+    <stream
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='jdt']/@projects[name='debug']/@streams[name='master']"/>
+    <stream
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='jdt']/@projects[name='features']/@streams[name='master']"/>
+    <stream
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='jdt']/@projects[name='ui']/@projects[name='examples']/@streams[name='master']"/>
+    <stream
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='jdt']/@projects[name='ui']/@projects[name='tests']/@streams[name='master']"/>
+    <stream
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='jdt']/@projects[name='ui']/@streams[name='master']"/>
+    <description>The JDT workspace provides the source code of the Java Development Tools.</description>
+  </workspace>
+  <description>
+    &lt;p>
+    The &lt;a href=&quot;https://www.eclipse.org/jdt/&quot;/>Java Development Tools&lt;/a> configuration provisions a dedicated development environment 
+    for the complete set of source projects of the &lt;a href=&quot;https://projects.eclipse.org/projects/eclipse.jdt&quot;>JDT project&lt;/a>.
+    &lt;/p>
+    &lt;p>
+    All the source projects from &lt;a href=&quot;https://github.com/eclipse-jdt&quot;>JDT's Github Repositories&lt;/a>
+    are available, organized into working sets, and ready for contribution.
+    &lt;/p>
+    &lt;/p>
+    Please &lt;a href=&quot;https://wiki.eclipse.org/Eclipse_Platform_SDK_Provisioning&quot;>read the analogous tutorial instructions&lt;/a> for the Eclipse Platform SDK's configuration for more details.
+    &lt;/p>
+  </description>
+</setup:Configuration>
