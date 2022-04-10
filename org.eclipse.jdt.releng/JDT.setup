@@ -416,7 +416,7 @@
       label="UI">
     <setupTask
         xsi:type="git:GitCloneTask"
-        id="github.clone.jdt.core"
+        id="github.clone.jdt.ui"
         remoteURI="eclipse-jdt/eclipse.jdt.ui">
       <annotation
           source="http://www.eclipse.org/oomph/setup/InducedChoices">
@@ -445,7 +445,7 @@
         <requirement
             name="org.eclipse.jdt.jeview.feature.feature.group"/>
         <sourceLocator
-            rootFolder="${github.clone.jdt.core.location}"/>
+            rootFolder="${github.clone.jdt.ui.location}"/>
       </targlet>
     </setupTask>
     <setupTask
