@@ -88,14 +88,14 @@
          id="org.eclipse.jdt.annotation"
          download-size="0"
          install-size="0"
-         version="1.2.0.qualifier"
+         version="1.2.100.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.jdt.annotation"
          download-size="0"
          install-size="0"
-         version="2.2.600.qualifier"
+         version="2.2.700.qualifier"
          unpack="false"/>
 
    <plugin
