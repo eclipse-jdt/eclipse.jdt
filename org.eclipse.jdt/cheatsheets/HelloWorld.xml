@@ -9,21 +9,21 @@ If you need help at any step, click the (?) to the right. Let&apos;s get started
    </intro>
    <item title="Open the Java perspective" dialog="false" skip="false" href="/org.eclipse.platform.doc.user/concepts/concepts-4.htm">
       <description>
-         If you&apos;re not already in the Java perspective, in the main menu select <b>Window</b> &gt; <b>Open Perspective</b> &gt; <b>Java</b> or click on the &quot;Click to Perform&quot; link below.
+         If you&apos;re not already in the Java perspective, in the main menu select <b>Window</b> &gt; <b>Perspective</b> &gt; <b>Open Perspective</b> &gt; <b>Other</b> &gt; <b>Java (default)</b> or click on the &quot;Click to Perform&quot; link below.
       </description>
       <command serialization="org.eclipse.ui.perspectives.showPerspective(org.eclipse.ui.perspectives.showPerspective.perspectiveId=org.eclipse.jdt.ui.JavaPerspective)" required="false" translate="">
       </command>
    </item>
    <item title="Create a Java project" dialog="true" skip="false" href="/org.eclipse.jdt.doc.user/concepts/concept-java-project.htm">
       <description>
-         Before creating a class, we need a project to put it in. In the main toolbar, click on the <b>New Java Project</b> button, or click on the link below. Enter <b>HelloWorld</b> for the project name, then	click <b>Finish</b>.
+         Before creating a class, we need a project to put it in. In the <b>Project Explorer</b> pane, click <b>Create a Java project</b>, or click on the link below. Enter <b>HelloWorld</b> for the <b>Project name</b>, uncheck <b>Create module-info.java file</b> then click <b>Finish</b>.
       </description>
       <command serialization="org.eclipse.ui.newWizard(newWizardId=org.eclipse.jdt.ui.wizards.JavaProjectWizard)" required="false" translate="">
       </command>
    </item>
    <item title="Create your HelloWorld class" dialog="true" skip="false" href="/org.eclipse.jdt.doc.user/gettingStarted/qs-9.htm">
       <description>
-         The next step is to create a new class. In the main toolbar again, click on the <b>New Java Class</b> button (or the link below). If not already specified, select <b>HelloWorld/src</b> as the source folder. Enter <b>HelloWorld</b> for the class name, select the checkbox to create the <b>main()</b> method, then click <b>Finish</b>.<br/>
+         The next step is to create a new class. In the main toolbar, click on the <b>New</b> button. In the <b>Select a Wizard</b> window double-click <b>Class</b> (or the link below). If not already specified, select <b>HelloWorld/src</b> as the source folder. Enter <b>HelloWorld</b> for the Name, select the "Which method stubs..." first checkbox to create the <b>main()</b> method, then click <b>Finish</b>.<br/>
 <br/>
 The Java editor will automatically open showing your new class.
       </description>
