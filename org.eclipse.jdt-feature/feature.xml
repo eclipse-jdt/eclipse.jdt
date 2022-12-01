@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.jdt"
       label="%featureName"
-      version="3.18.1400.qualifier"
+      version="3.19.0.qualifier"
       provider-name="%providerName"
       license-feature="org.eclipse.license"
       license-feature-version="0.0.0">
@@ -55,19 +55,10 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.jdt.compiler.apt"
+         id="org.eclipse.jdt.core.compiler.batch"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.jdt.compiler.tool"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
