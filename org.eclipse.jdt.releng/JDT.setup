@@ -186,11 +186,7 @@
           name="JDT Core"
           activeRepositoryList="${eclipse.target.platform}">
         <requirement
-            name="org.eclipse.jdt.apt.ui"/>
-        <requirement
-            name="org.eclipse.jdt.core.internal.tools"/>
-        <requirement
-            name="org.eclipse.jdt.core.ecj.validation.plain.project"/>
+            name="*"/>
         <sourceLocator
             rootFolder="${github.clone.jdt.core.location}"/>
       </targlet>
@@ -209,8 +205,20 @@
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern=".*tests.*|.*examples.*"/>
+                pattern=".*tests.*|.*examples.*|converterJcl.*"/>
           </operand>
+        </predicate>
+      </workingSet>
+      <workingSet
+          name="JDT JCL">
+        <predicate
+            xsi:type="predicates:AndPredicate">
+          <operand
+              xsi:type="predicates:RepositoryPredicate"
+              project="org.eclipse.jdt.core"/>
+          <operand
+              xsi:type="predicates:NamePredicate"
+              pattern="converterJcl.*"/>
         </predicate>
       </workingSet>
     </setupTask>
@@ -480,6 +488,8 @@
               name="org.eclipse.ltk.core.refactoring.tests"/>
           <requirement
               name="org.eclipse.ltk.ui.refactoring.tests"/>
+          <requirement
+              name="org.eclipse.jdt.ui.unittest.junit.feature.feature.group"/>
         </targlet>
       </setupTask>
       <setupTask
@@ -506,6 +516,16 @@
         name="examples"
         label="Examples">
       <setupTask
+          xsi:type="setup:TextModifyTask"
+          excludedTriggers="BOOTSTRAP"
+          url="${github.clone.jdt.ui.location|uri}/org.eclipse.jdt.ui.junit.sampleproject/.project"
+          encoding="UTF-8">
+        <modification
+            pattern="(?im)(^[^&lt;].*maven.*$)">
+          <substitution>&lt;!-- \1 --></substitution>
+        </modification>
+      </setupTask>
+      <setupTask
           xsi:type="setup.targlets:TargletTask">
         <targlet
             name="JDT UI Examples">
@@ -513,6 +533,8 @@
               name="org.eclipse.jdt.ui.examples.javafamily"/>
           <requirement
               name="org.eclipse.jdt.ui.examples.projects"/>
+          <requirement
+              name="org.eclipse.jdt.ui.junit.sampleproject.plain.project"/>
         </targlet>
       </setupTask>
       <setupTask
@@ -527,7 +549,7 @@
                 project="org.eclipse.jdt.ui"/>
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern=".*examples.*"/>
+                pattern=".*examples.*|.*sampleproject.*"/>
           </predicate>
         </workingSet>
       </setupTask>
