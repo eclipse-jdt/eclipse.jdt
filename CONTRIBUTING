@@ -22,18 +22,17 @@ more.
 
 The project maintains the following source code repositories
 
-* http://git.eclipse.org/c/jdt/eclipse.jdt.core.binaries.git
-* http://git.eclipse.org/c/jdt/eclipse.jdt.core.git
-* http://git.eclipse.org/c/jdt/eclipse.jdt.debug.git
-* http://git.eclipse.org/c/jdt/eclipse.jdt.git
-* http://git.eclipse.org/c/jdt/eclipse.jdt.ui.git
+* https://github.com/eclipse-jdt/eclipse.jdt.core.binaries
+* https://github.com/eclipse-jdt/eclipse.jdt.core
+* https://github.com/eclipse-jdt/eclipse.jdt.debug
+* https://github.com/eclipse-jdt/eclipse.jdt
+* https://github.com/eclipse-jdt/eclipse.jdt.ui
 
-This project uses Bugzilla to track ongoing development and issues.
+This project uses Github to track ongoing development and issues.
+To search for issues or raise new ones, go to the respective project's
+issues section.
 
-* Search for issues: https://eclipse.org/bugs/buglist.cgi?product=JDT
-* Create a new report: https://eclipse.org/bugs/enter_bug.cgi?product=JDT
-
-Be sure to search for existing bugs before you create another one. Remember that
+Be sure to search for existing issues before you create another one. Remember that
 contributions are always welcome!
 
 ## Eclipse Contributor Agreement
