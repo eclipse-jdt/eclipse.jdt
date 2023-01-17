@@ -22,6 +22,12 @@
       xsi:type="setup.p2:P2Task">
     <requirement
         name="org.eclipse.jdt.junit4.runtime"/>
+    <requirement
+        name="org.eclipse.jdt.astview.feature.feature.group"
+        optional="true"/>
+    <requirement
+        name="org.eclipse.jdt.jeview.feature.feature.group"
+        optional="true"/>
   </setupTask>
   <setupTask
       xsi:type="setup:EclipseIniTask"
