@@ -474,7 +474,7 @@
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern=".*tests.*|.*examples.*"/>
+                pattern=".*tests.*|.*examples.*|.*sampleproject.*"/>
           </operand>
         </predicate>
       </workingSet>
