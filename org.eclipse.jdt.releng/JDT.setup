@@ -128,6 +128,12 @@
           <value>remoteURI</value>
         </detail>
       </annotation>
+      <configSections
+          name="branch">
+        <properties
+            key="autoSetupRebase"
+            value="always"/>
+      </configSections>
       <description>JDT Features</description>
     </setupTask>
     <setupTask
@@ -184,6 +190,12 @@
           <value>remoteURI</value>
         </detail>
       </annotation>
+      <configSections
+          name="branch">
+        <properties
+            key="autoSetupRebase"
+            value="always"/>
+      </configSections>
       <description>JDT Core</description>
     </setupTask>
     <setupTask
@@ -288,6 +300,12 @@
             <value>remoteURI</value>
           </detail>
         </annotation>
+        <configSections
+            name="branch">
+          <properties
+              key="autoSetupRebase"
+              value="always"/>
+        </configSections>
         <description>JDT Core Tests</description>
       </setupTask>
       <setupTask
@@ -342,6 +360,12 @@
           <value>remoteURI</value>
         </detail>
       </annotation>
+      <configSections
+          name="branch">
+        <properties
+            key="autoSetupRebase"
+            value="always"/>
+      </configSections>
       <description>JDT Core</description>
     </setupTask>
     <setupTask
@@ -445,6 +469,12 @@
           <value>remoteURI</value>
         </detail>
       </annotation>
+      <configSections
+          name="branch">
+        <properties
+            key="autoSetupRebase"
+            value="always"/>
+      </configSections>
       <description>JDT UI</description>
     </setupTask>
     <setupTask
