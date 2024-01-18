@@ -25,7 +25,7 @@ pipeline {
 			post {
 				always {
 					archiveArtifacts artifacts: '*.log,*/target/work/data/.metadata/*.log,*/tests/target/work/data/.metadata/*.log,apiAnalyzer-workspace/.metadata/*.log', allowEmptyArchive: true
-					publishIssues issues:[scanForIssues(tool: java()), scanForIssues(tool: mavenConsole())]
+					publishIssues issues:[scanForIssues(tool: eclipse(pattern: '**/target/compilelogs/*.xml')), scanForIssues(tool: mavenConsole())]
 				}
 			}
 		}
