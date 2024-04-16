@@ -69,7 +69,7 @@
       <description>
          Now we need a project to store our own source code. In the main
 			toolbar, click on the <b>New Java Project</b> button, or click on
-			the link below. Enter <b>HelloWorldSWT</b> for the project name,
+			the link below.  Click on the <b>Create module-info.java file</b> option checkbox to deselect it.  Enter <b>HelloWorldSWT</b> for the project name,
 			then click <b>Finish</b>.
       </description>
       <command serialization="org.eclipse.ui.newWizard(newWizardId=org.eclipse.jdt.ui.wizards.JavaProjectWizard)" required="false" translate="">
