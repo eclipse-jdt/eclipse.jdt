@@ -206,7 +206,14 @@
         <requirement
             name="*"/>
         <sourceLocator
-            rootFolder="${github.clone.jdt.core.location}"/>
+            rootFolder="${github.clone.jdt.core.location}">
+          <predicate
+              xsi:type="predicates:NotPredicate">
+            <operand
+                xsi:type="predicates:NamePredicate"
+                pattern="converterJclMin|converterJclMin1.5"/>
+          </predicate>
+        </sourceLocator>
       </targlet>
     </setupTask>
     <setupTask
