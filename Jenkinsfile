@@ -4,7 +4,7 @@ pipeline {
 		buildDiscarder(logRotator(numToKeepStr:'5'))
 	}
 	agent {
-		label "centos-latest"
+		label "ubuntu-latest"
 	}
 	tools {
 		maven 'apache-maven-latest'
