@@ -173,6 +173,11 @@
   </project>
   <project name="core"
       label="Core">
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/ConfigurationReference">
+      <reference
+          href="https://raw.githubusercontent.com/eclipse-jdt/eclipse.jdt.core/master/org.eclipse.jdt.core.setup/JdtCoreConfiguration.setup#/"/>
+    </annotation>
     <setupTask
         xsi:type="git:GitCloneTask"
         id="github.clone.jdt.core"
@@ -350,6 +355,11 @@
   </project>
   <project name="debug"
       label="Debug">
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/ConfigurationReference">
+      <reference
+          href="https://raw.githubusercontent.com/eclipse-jdt/eclipse.jdt.debug/master/org.eclipse.jdt.debug.setup/JdtDebugConfiguration.setup#/"/>
+    </annotation>
     <setupTask
         xsi:type="git:GitCloneTask"
         id="github.clone.jdt.debug"
@@ -459,6 +469,11 @@
   </project>
   <project name="ui"
       label="UI">
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/ConfigurationReference">
+      <reference
+          href="https://raw.githubusercontent.com/eclipse-jdt/eclipse.jdt.ui/master/org.eclipse.jdt.ui.setup/JdtUIConfiguration.setup#/"/>
+    </annotation>
     <setupTask
         xsi:type="git:GitCloneTask"
         id="github.clone.jdt.ui"
