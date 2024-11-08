@@ -29,7 +29,7 @@ JDT_VERSION_RANGE=${JDT_VERSION_RANGE:="[3.20.0.v${SDKTIMESTAMP},${JDT_VERSION_M
 ## Prepare eclipse for running the build:
 if [ ! -e ${SDKFILE} ]
 then
-	wget ${SDKURL}
+	wget -nv ${SDKURL}
 fi
 if [ ! -x eclipse/eclipse ]
 then
@@ -89,10 +89,12 @@ ${BASE}/eclipse/eclipse -nosplash -application org.eclipse.equinox.p2.publisher.
 
 cd work/buildRepo
 mv content.xml content-ORIG.xml
-xsltproc --nonet --nowrite \
-	--stringparam patchFeatureVersionRange "${JDT_VERSION_RANGE}" \
-	--stringparam patchFeatureIU org.eclipse.jdt.java24patch.feature.group ${BASE}/patchMatchVersion.xsl \
-	content-ORIG.xml > content.xml
+#xsltproc --nonet --nowrite \
+#	--stringparam patchFeatureVersionRange "${JDT_VERSION_RANGE}" \
+#	--stringparam patchFeatureIU org.eclipse.jdt.java24patch.feature.group ${BASE}/patchMatchVersion.xsl \
+#	content-ORIG.xml > content.xml
+ant -f ${BASE}/patchMatchVersion.xml -DpatchFeatureVersionRange="${JDT_VERSION_RANGE}" -DBASE=${BASE}
+
 
 jar cf content.jar content.xml
 jar cf artifacts.jar artifacts.xml
