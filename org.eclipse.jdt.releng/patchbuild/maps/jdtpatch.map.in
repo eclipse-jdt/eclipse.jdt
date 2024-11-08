@@ -1,0 +1,8 @@
+plugin@org.eclipse.jdt.core.compiler.batch=p2IU,id=org.eclipse.jdt.core.compiler.batch,repository=Y_BUILD
+plugin@org.eclipse.jdt.core=p2IU,id=org.eclipse.jdt.core,repository=Y_BUILD
+plugin@org.eclipse.jdt.ui=p2IU,id=org.eclipse.jdt.ui,repository=Y_BUILD
+plugin@org.eclipse.jdt.core.manipulation=p2IU,id=org.eclipse.jdt.core.manipulation,repository=Y_BUILD
+plugin@org.eclipse.jdt.astview=p2IU,id=org.eclipse.jdt.astview,repository=Y_BUILD
+plugin@org.eclipse.jdt.launching=p2IU,id=org.eclipse.jdt.launching,repository=Y_BUILD
+
+feature@org.eclipse.jdt.java24patch=COPY,BASEDIR/src

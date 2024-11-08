@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="org.eclipse.jdt.java24patch" version="0.0.0" patch="true">
+      <category name="Eclipse Java 23 support for 2024-12 development stream"/>
+   </feature>
+   <feature id="org.eclipse.jdt.java24patch.source" version="0.0.0" patch="true">
+      <category name="Eclipse Java 23 support for 2024-12 development stream"/>
+   </feature>
+   <category-def name="Eclipse Java 23 support for 2024-12 development stream" label="Eclipse Java 23 support for 2024-12 development stream">
+      <description>
+         Eclipse Java 23 support for 2024-12 development stream.
+      </description>
+   </category-def>
+</site>

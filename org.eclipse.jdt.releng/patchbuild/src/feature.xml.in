@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.jdt.java24patch"
+      label="%featureName"
+      version="1.2.400.qualifier"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import feature="org.eclipse.jdt" version="3.20.0.vSDKTIMESTAMP" patch="true"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.jdt.core"
+         version="3.40.50.qualifier"/>
+
+   <plugin
+         id="org.eclipse.jdt.core.compiler.batch"
+         version="3.40.50.qualifier"/>
+
+   <plugin
+         id="org.eclipse.jdt.ui"
+         version="3.33.200.qualifier"/>
+
+   <plugin
+         id="org.eclipse.jdt.core.manipulation"
+         version="1.21.300.qualifier"/>
+
+   <plugin
+         id="org.eclipse.jdt.astview"
+         version="1.6.250.qualifier"/>
+
+   <plugin
+         id="org.eclipse.jdt.launching"
+         version="3.23.150.qualifier"/>
+
+</feature>
