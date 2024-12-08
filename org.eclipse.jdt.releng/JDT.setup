@@ -218,7 +218,7 @@
               xsi:type="predicates:NotPredicate">
             <operand
                 xsi:type="predicates:NamePredicate"
-                pattern="converterJclMin|converterJclMin1.5"/>
+                pattern="converterJclMin|converterJclMin1.5|org.eclipse.jdt.annotation_v1"/>
           </predicate>
         </sourceLocator>
       </targlet>
