@@ -23,23 +23,23 @@
 
    <plugin
          id="org.eclipse.jdt.core"
-         version="3.40.50.qualifier"/>
+         version="3.41.50.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.core.compiler.batch"
-         version="3.40.50.qualifier"/>
+         version="3.41.50.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.ui"
-         version="3.33.200.qualifier"/>
+         version="3.34.0.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.core.manipulation"
-         version="1.21.300.qualifier"/>
+         version="1.21.400.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.astview"
-         version="1.6.250.qualifier"/>
+         version="1.6.300.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.launching"
