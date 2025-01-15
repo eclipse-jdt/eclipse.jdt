@@ -89,19 +89,23 @@ ${BASE}/eclipse/eclipse -nosplash -application org.eclipse.equinox.p2.publisher.
 	-source ${BASE}/work
 
 # restore exploded feature to generated content.xml with property substitutions:
+rm work/org.eclipse.jdt.java24patch_*.jar
 mv work/org.eclipse.jdt.java24patch work/features
 cd work/features/org.eclipse.jdt.java24patch
 unzip -o ${BASE}/work/buildRepo/features/org.eclipse.jdt.java24patch_* feature.xml
+ls -l
 cd -
 
 ${BASE}/eclipse/eclipse -nosplash -application org.eclipse.equinox.p2.publisher.FeaturesAndBundlesPublisher \
 	-metadataRepository file:${BASE}/work/buildRepo \
 	-source ${BASE}/work
+ls -l work/buildRepo
 
 # finally create category metadata
 ${BASE}/eclipse/eclipse -nosplash -application org.eclipse.equinox.p2.publisher.CategoryPublisher \
 	-metadataRepository file:${BASE}/work/buildRepo \
 	-categoryDefinition file:${BASE}/src/category.xml 
+ls -l work/buildRepo
 
 cd work/buildRepo
 mv content.xml content-ORIG.xml
@@ -110,6 +114,7 @@ mv content.xml content-ORIG.xml
 #	--stringparam patchFeatureIU org.eclipse.jdt.java24patch.feature.group ${BASE}/patchMatchVersion.xsl \
 #	content-ORIG.xml > content.xml
 ant -f ${BASE}/patchMatchVersion.xml -DpatchFeatureVersionRange="${JDT_VERSION_RANGE}" -DBASE=${BASE}
+ls -l work/buildRepo
 
 
 jar cf content.jar content.xml
