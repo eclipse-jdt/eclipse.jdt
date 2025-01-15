@@ -23,7 +23,7 @@ SDKFILE=eclipse-SDK-${SDKVERSION}-linux-gtk-x86_64.tar.gz
 DROPS_DIR=${DROPS_DIR:=${SDKVERSION}}
 SDKURL=https://download.eclipse.org/eclipse/downloads/drops4/${DROPS_DIR}/${SDKFILE}
 # range of versions of org.eclipse.jdt.feature.group to which the result should be applicable:
-JDT_VERSION_RANGE=${JDT_VERSION_RANGE:="[3.20.0.v${SDKTIMESTAMP},${JDT_VERSION_MAX})"}
+JDT_VERSION_RANGE=${JDT_VERSION_RANGE:="[3.20.100.v${SDKTIMESTAMP},${JDT_VERSION_MAX})"}
 ### END PARAMS
 
 ## Prepare eclipse for running the build:
@@ -74,15 +74,31 @@ ls -lR buildRepo
 	
 cd ${BASE}
 
+
+# use feature jar to create artifacts.xml with checksums:
+cd work/features
+mv org.eclipse.jdt.java24patch ..
+# add signing here:
+cp ${BASE}/work/buildRepo/features/org.eclipse.jdt.java24patch_* .
+cd -
+
+
+${BASE}/eclipse/eclipse -nosplash -application org.eclipse.equinox.p2.publisher.FeaturesAndBundlesPublisher \
+	-artifactRepository file:${BASE}/work/buildRepo \
+	-metadataRepository file:${BASE}/work/buildRepo \
+	-source ${BASE}/work
+
+# restore exploded feature to generated content.xml with property substitutions:
+mv work/org.eclipse.jdt.java24patch work/features
 cd work/features/org.eclipse.jdt.java24patch
 unzip -o ${BASE}/work/buildRepo/features/org.eclipse.jdt.java24patch_* feature.xml
 cd -
 
 ${BASE}/eclipse/eclipse -nosplash -application org.eclipse.equinox.p2.publisher.FeaturesAndBundlesPublisher \
 	-metadataRepository file:${BASE}/work/buildRepo \
-	-artifactRepository file:${BASE}/work/buildRepo \
 	-source ${BASE}/work
 
+# finally create category metadata
 ${BASE}/eclipse/eclipse -nosplash -application org.eclipse.equinox.p2.publisher.CategoryPublisher \
 	-metadataRepository file:${BASE}/work/buildRepo \
 	-categoryDefinition file:${BASE}/src/category.xml 

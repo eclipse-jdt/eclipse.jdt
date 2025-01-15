@@ -33,18 +33,16 @@
          id="org.eclipse.jdt.ui"
          version="3.34.0.qualifier"/>
 
-<!--
    <plugin
          id="org.eclipse.jdt.core.manipulation"
-         version="1.21.400.qualifier"/>
+         version="1.22.000.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.astview"
-         version="1.6.300.qualifier"/>
--->
+         version="1.7.100.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.launching"
-         version="3.23.150.qualifier"/>
+         version="3.23.250.qualifier"/>
 
 </feature>
