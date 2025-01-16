@@ -74,47 +74,34 @@ ls -lR buildRepo
 	
 cd ${BASE}
 
-
-# use feature jar to create artifacts.xml with checksums:
-cd work/features
-mv org.eclipse.jdt.java24patch ..
-# add signing here:
-cp ${BASE}/work/buildRepo/features/org.eclipse.jdt.java24patch_* .
+# update the generated feature jar with two files missed during the above build:
+cd src/org.eclipse.jdt.java24patch
+jar -uf ${BASE}/work/buildRepo/features/org.eclipse.jdt.java24patch_* feature.properties license.html
+# add signing of the feature jar here
 cd -
 
-
+# add general metadata (from buildRepo to buildRepo2):
 ${BASE}/eclipse/eclipse -nosplash -application org.eclipse.equinox.p2.publisher.FeaturesAndBundlesPublisher \
-	-artifactRepository file:${BASE}/work/buildRepo \
-	-metadataRepository file:${BASE}/work/buildRepo \
-	-source ${BASE}/work
+	-artifactRepository file:${BASE}/work/buildRepo2 \
+	-metadataRepository file:${BASE}/work/buildRepo2 \
+	-source ${BASE}/work/buildRepo
 
-# restore exploded feature to generated content.xml with property substitutions:
-rm work/org.eclipse.jdt.java24patch_*.jar
-mv work/org.eclipse.jdt.java24patch work/features
-cd work/features/org.eclipse.jdt.java24patch
-unzip -o ${BASE}/work/buildRepo/features/org.eclipse.jdt.java24patch_* feature.xml
-ls -l
-cd -
+ls -l work/buildRepo2
 
-${BASE}/eclipse/eclipse -nosplash -application org.eclipse.equinox.p2.publisher.FeaturesAndBundlesPublisher \
-	-metadataRepository file:${BASE}/work/buildRepo \
-	-source ${BASE}/work
-ls -l work/buildRepo
-
-# finally create category metadata
+# add category metadata
 ${BASE}/eclipse/eclipse -nosplash -application org.eclipse.equinox.p2.publisher.CategoryPublisher \
-	-metadataRepository file:${BASE}/work/buildRepo \
+	-metadataRepository file:${BASE}/work/buildRepo2 \
 	-categoryDefinition file:${BASE}/src/category.xml 
-ls -l work/buildRepo
+ls -l work/buildRepo2
 
-cd work/buildRepo
+cd work/buildRepo2
 mv content.xml content-ORIG.xml
 #xsltproc --nonet --nowrite \
 #	--stringparam patchFeatureVersionRange "${JDT_VERSION_RANGE}" \
 #	--stringparam patchFeatureIU org.eclipse.jdt.java24patch.feature.group ${BASE}/patchMatchVersion.xsl \
 #	content-ORIG.xml > content.xml
-ant -f ${BASE}/patchMatchVersion.xml -DpatchFeatureVersionRange="${JDT_VERSION_RANGE}" -DBASE=${BASE}
-ls -l work/buildRepo
+ant -f ${BASE}/patchMatchVersion.xml -DpatchFeatureVersionRange="${JDT_VERSION_RANGE}" -DBASE=${BASE} -DREPODIR=${BASE}/work/buildRepo2
+ls -l
 
 
 jar cf content.jar content.xml

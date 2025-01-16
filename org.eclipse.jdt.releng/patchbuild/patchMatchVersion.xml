@@ -1,13 +1,13 @@
 <project name="patchMetadata" default="main">
 
     <target name="main">
-        <echo message="Patching metadata in ${BASE}/work/buildRepo to relax version requirement of our patch feature"/>
+        <echo message="Patching metadata in ${REPODIR} to relax version requirement of our patch feature"/>
 
 		<!-- patch feature version in content.xml -->
 		<property name="patch-content.xsltFile" value="${BASE}/patchMatchVersion.xsl" />
 		<property name="content.origFile" value="content-ORIG.xml" />
         <property name="content.transFile" value="content.xml" />
-        <xslt basedir="${BASE}/work/buildRepo" destdir="${BASE}/work/buildRepo" includes="${content.origFile}" style="${patch-content.xsltFile}" force="true">
+        <xslt basedir="${REPODIR}" destdir="${REPODIR}" includes="${content.origFile}" style="${patch-content.xsltFile}" force="true">
                 <outputproperty name="method" value="xml"/>
                 <outputproperty name="encoding" value="UTF-8"/>
                 <outputproperty name="indent" value="yes"/>
