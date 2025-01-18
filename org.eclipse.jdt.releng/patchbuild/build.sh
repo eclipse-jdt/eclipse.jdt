@@ -76,8 +76,17 @@ cd ${BASE}
 
 # update the generated feature jar with two files missed during the above build:
 cd src/org.eclipse.jdt.java24patch
-jar -uf ${BASE}/work/buildRepo/features/org.eclipse.jdt.java24patch_* feature.properties license.html
-# add signing of the feature jar here
+jar -uvf ${BASE}/work/buildRepo/features/org.eclipse.jdt.java24patch_* feature.properties license.html
+ls -l ${BASE}/work/buildRepo/features
+cd -
+# sign the feature jar:
+mkdir work/signed
+cd work/buildRepo/features
+JAR=`ls org.eclipse.jdt.java24patch_*.jar`
+echo "feature jar is ${JAR}"
+curl -o ${BASE}/work/signed/${JAR} -F file=@${JAR} https://cbi.eclipse.org/jarsigner/sign
+ls -l . ${BASE}/work/signed
+cp ${BASE}/work/signed/${JAR} .
 cd -
 
 # add general metadata (from buildRepo to buildRepo2):
