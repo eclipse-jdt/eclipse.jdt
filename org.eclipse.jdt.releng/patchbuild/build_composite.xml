@@ -1,0 +1,9 @@
+<project name="build-composite" default="addChild">
+	<target name="addChild">
+		<echo message="child=${child}"/>
+		<p2.composite.repository>
+			<repository compressed="false" location="." name="The JDT Project repository of patch builds"/>
+			<add><repository location="${child}"/></add>
+		</p2.composite.repository>
+	</target>
+</project>
