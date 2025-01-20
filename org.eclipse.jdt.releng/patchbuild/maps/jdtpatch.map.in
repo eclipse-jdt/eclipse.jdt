@@ -5,4 +5,4 @@ plugin@org.eclipse.jdt.core.manipulation=p2IU,id=org.eclipse.jdt.core.manipulati
 plugin@org.eclipse.jdt.astview=p2IU,id=org.eclipse.jdt.astview,repository=Y_BUILD
 plugin@org.eclipse.jdt.launching=p2IU,id=org.eclipse.jdt.launching,repository=Y_BUILD
 
-feature@org.eclipse.jdt.java24patch=COPY,BASEDIR/src
+feature@org.eclipse.jdt.javanextpatch=COPY,BASEDIR/src

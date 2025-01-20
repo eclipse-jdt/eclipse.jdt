@@ -54,7 +54,7 @@ else
 fi
 
 ## Substitutions:
-cat src/feature.xml.in | sed -e "s|SDKTIMESTAMP|${SDKTIMESTAMP}|" > src/org.eclipse.jdt.java24patch/feature.xml
+cat src/feature.xml.in | sed -e "s|SDKTIMESTAMP|${SDKTIMESTAMP}|" > src/org.eclipse.jdt.javanextpatch/feature.xml
 cat builder/build.properties.in | sed -e "s|BASEDIR|${BASE}|g;s/TIMESTAMP/${TIMESTAMP}/g" > builder/build.properties
 cat maps/jdtpatch.map.in | sed -e "s|BASEDIR|${BASE}|g;s|Y_BUILD|${Y_BUILD}|g" > maps/jdtpatch.map
 cp maps/jdtpatch.map work/directory.txt
@@ -75,14 +75,14 @@ ls -lR buildRepo
 cd ${BASE}
 
 # update the generated feature jar with two files missed during the above build:
-cd src/org.eclipse.jdt.java24patch
-jar -uvf ${BASE}/work/buildRepo/features/org.eclipse.jdt.java24patch_* feature.properties license.html
+cd src/org.eclipse.jdt.javanextpatch
+jar -uvf ${BASE}/work/buildRepo/features/org.eclipse.jdt.javanextpatch_* feature.properties license.html
 ls -l ${BASE}/work/buildRepo/features
 cd -
 # sign the feature jar:
 mkdir work/signed
 cd work/buildRepo/features
-JAR=`ls org.eclipse.jdt.java24patch_*.jar`
+JAR=`ls org.eclipse.jdt.javanextpatch_*.jar`
 echo "feature jar is ${JAR}"
 curl -o ${BASE}/work/signed/${JAR} -F file=@${JAR} https://cbi.eclipse.org/jarsigner/sign
 ls -l . ${BASE}/work/signed
@@ -107,7 +107,7 @@ cd work/buildRepo2
 mv content.xml content-ORIG.xml
 #xsltproc --nonet --nowrite \
 #	--stringparam patchFeatureVersionRange "${JDT_VERSION_RANGE}" \
-#	--stringparam patchFeatureIU org.eclipse.jdt.java24patch.feature.group ${BASE}/patchMatchVersion.xsl \
+#	--stringparam patchFeatureIU org.eclipse.jdt.javanextpatch.feature.group ${BASE}/patchMatchVersion.xsl \
 #	content-ORIG.xml > content.xml
 ant -f ${BASE}/patchMatchVersion.xml -DpatchFeatureVersionRange="${JDT_VERSION_RANGE}" -DBASE=${BASE} -DREPODIR=${BASE}/work/buildRepo2
 ls -l
@@ -115,5 +115,5 @@ ls -l
 
 jar cf content.jar content.xml
 jar cf artifacts.jar artifacts.xml
-zip -r ${BASE}/work/org.eclipse.jdt.java24patch.zip features plugins *.jar
+zip -r ${BASE}/work/org.eclipse.jdt.javanextpatch.zip features plugins *.jar
 cd -
