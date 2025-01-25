@@ -136,5 +136,5 @@ mv buildRepo2 P${TIMESTAMP}
 cp ../build_composite.xml .
 java -jar ${LAUNCHER} -nosplash -application org.eclipse.ant.core.antRunner -f build_composite.xml -Dchild=P${TIMESTAMP}
 ls -l
-scp -r P${TIMESTAMP} composite*.xml genie.jdt@projects-storage.eclipse.org/home/data/httpd/download.eclipse.org/jdt/updates/4.35-P-builds
+scp -r P${TIMESTAMP} composite*.xml genie.jdt@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/jdt/updates/4.35-P-builds
 
