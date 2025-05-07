@@ -4,3 +4,4 @@ Bug 518239: [JUnit 5] Feature patch for JUnit 5 support on 4.7
 Bug 535802 - EPL-2.0
 Update junit dependencies: https://github.com/eclipse-platform/eclipse.platform.releng.aggregator/pull/799
 Update junit dependencies https://github.com/eclipse-platform/eclipse.platform.releng.aggregator/pull/2225
+Broken I-Build https://ci.eclipse.org/releng/job/Builds/job/I-build-4.36/46/
