@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="org.eclipse.jdt.javanextpatch" version="0.0.0" patch="true">
+      <category name="Eclipse Java Development Tools"/>
+   </feature>
+   <category-def name="Eclipse Java Development Tools" label="Eclipse Java Development Tools">
+      <description>
+         Patch features for updating JDT to support development with Java 24.
+      </description>
+   </category-def>
+</site>

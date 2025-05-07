@@ -1,0 +1,9 @@
+<project name="build-composite" default="addChild">
+	<target name="addChild">
+		<echo message="child=${child}"/>
+		<p2.composite.repository>
+			<repository compressed="false" location="." name="The Eclipse Project Updates for Java 24"/>
+			<add><repository location="${child}"/></add>
+		</p2.composite.repository>
+	</target>
+</project>

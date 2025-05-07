@@ -1,0 +1,16 @@
+collectingFolder=.
+archivePrefix=.
+base=BASEDIR/eclipse
+baseLocation=BASEDIR/eclipse
+
+p2.gathering=true
+skipMirroring=true
+p2.metadata.repo.name="The Eclipse Project Updates for Java 24"
+p2.category.definition=file:BASEDIR/src/category.xml
+
+topLevelElementType=feature
+topLevelElementId=org.eclipse.jdt.javanextpatch
+
+buildLabel=P
+buildId=TIMESTAMP
+
