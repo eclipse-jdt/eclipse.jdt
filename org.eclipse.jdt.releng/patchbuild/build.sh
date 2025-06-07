@@ -23,7 +23,7 @@ SDKFILE=eclipse-SDK-${SDKVERSION}-linux-gtk-x86_64.tar.gz
 DROPS_DIR=${DROPS_DIR:=${SDKVERSION}}
 SDKURL=https://download.eclipse.org/eclipse/downloads/drops4/${DROPS_DIR}/${SDKFILE}
 # range of versions of org.eclipse.jdt.feature.group to which the result should be applicable:
-JDT_VERSION_RANGE=${JDT_VERSION_RANGE:="[3.20.100.v${SDKTIMESTAMP},${JDT_VERSION_MAX})"}
+JDT_VERSION_RANGE=${JDT_VERSION_RANGE:="[3.20.300.v${SDKTIMESTAMP},${JDT_VERSION_MAX})"}
 ### END PARAMS
 
 ## (1) Download and extract a specified Eclipse SDK
@@ -136,5 +136,6 @@ mv buildRepo2 P${TIMESTAMP}
 cp ../build_composite.xml .
 java -jar ${LAUNCHER} -nosplash -application org.eclipse.ant.core.antRunner -f build_composite.xml -Dchild=P${TIMESTAMP}
 ls -l
-scp -r P${TIMESTAMP} composite*.xml genie.jdt@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/jdt/updates/4.35-P-builds
+ssh genie.jdt@projects-storage.eclipse.org 'mkdir /home/data/httpd/download.eclipse.org/jdt/updates/4.37-P-builds'
+scp -r P${TIMESTAMP} composite*.xml genie.jdt@projects-storage.eclipse.org:/home/data/httpd/download.eclipse.org/jdt/updates/4.37-P-builds
 

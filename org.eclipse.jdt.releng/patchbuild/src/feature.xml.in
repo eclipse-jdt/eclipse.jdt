@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.jdt.javanextpatch"
       label="%featureName"
-      version="1.24.0.qualifier"
+      version="1.25.0.qualifier"
       provider-name="%providerName">
 
    <description>
@@ -18,7 +18,7 @@
    </license>
 
    <requires>
-      <import feature="org.eclipse.jdt" version="3.20.100.vSDKTIMESTAMP" patch="true"/>
+      <import feature="org.eclipse.jdt" version="3.20.300.vSDKTIMESTAMP" patch="true"/>
    </requires>
 
    <plugin
