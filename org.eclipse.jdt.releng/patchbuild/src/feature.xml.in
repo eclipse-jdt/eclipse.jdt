@@ -23,11 +23,11 @@
 
    <plugin
          id="org.eclipse.jdt.core"
-         version="3.42.50.qualifier"/>
+         version="3.42.150.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.core.compiler.batch"
-         version="3.42.50.qualifier"/>
+         version="3.42.150.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.ui"
