@@ -48,4 +48,19 @@ The final trick is that FeaturesAndBundlesPublisher must also copy everything in
 
 The CategoryPublisher had no such issues, it will update the previous result inline.
 
+# Expected warnings during the build
 
+Warnings like the following can be ignored:
+* `[eclipse.fetch] The entry plugin@org.eclipse.jdt.core,3.42.150.qualifier has not been found. The entry plugin@org.eclipse.jdt.core has been used instead.`
+
+# Trouble Shooting
+
+Things most likely go wrong during the first ant build, under the heading **generateScript:**
+
+This step requires that the following are consistent with each other: plugins in the reference Y-build, entries in `feature.xml.in` (what to include) and entries in `jdtpatch.map.in` (where to find it).
+
+* Error like `[eclipse.fetch] Missing directory entry: plugin@org.eclipse.jdt.debug,3.23.150.qualifier.`
+   * this indicates that the file `patchbuild/maps/jdtpatch.map.in` is incomplete
+* Error like `Unable to find plug-in: org.eclipse.jdt.launching_3.23.350.qualifier.`
+   * likely a version inconsistency between an entry in `patchbuild/src/feature.xml.in` and the actual plugin
+   
