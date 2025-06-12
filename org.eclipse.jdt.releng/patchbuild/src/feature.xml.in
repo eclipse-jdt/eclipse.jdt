@@ -43,10 +43,10 @@
 
    <plugin
          id="org.eclipse.jdt.launching"
-         version="3.23.350.qualifier"/>
+         version="3.23.450.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.debug"
-         version="3.23.0.qualifier"/>
+         version="3.23.150.qualifier"/>
 
 </feature>
