@@ -31,11 +31,11 @@
 
    <plugin
          id="org.eclipse.jdt.ui"
-         version="3.35.0.qualifier"/>
+         version="3.35.50.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.core.manipulation"
-         version="1.23.0.qualifier"/>
+         version="1.23.50.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.astview"
