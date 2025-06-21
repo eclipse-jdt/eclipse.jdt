@@ -31,15 +31,17 @@
 
    <plugin
          id="org.eclipse.jdt.ui"
-         version="3.35.50.qualifier"/>
+         version="3.35.150.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.core.manipulation"
-         version="1.23.50.qualifier"/>
+         version="1.23.150.qualifier"/>
 
+<!-- no longer needs changes in beta branches: 
    <plugin
          id="org.eclipse.jdt.astview"
          version="1.7.100.qualifier"/>
+-->
 
    <plugin
          id="org.eclipse.jdt.launching"
