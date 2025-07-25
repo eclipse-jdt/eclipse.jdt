@@ -40,41 +40,6 @@
           </dependency-resolution>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.eclipse.tycho</groupId>
-        <artifactId>tycho-source-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <id>feature-source</id>
-            <goals>
-              <goal>feature-source</goal>
-            </goals>
-            <configuration>
-              <plugins>
-                <plugin id="org.eclipse.jdt.doc.isv" versionRange="0.0.0"/>
-              </plugins>
-              <excludes>
-                <plugin id="org.eclipse.jdt"/>
-                <plugin id="org.eclipse.jdt.doc.user"/>
-              </excludes>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.eclipse.tycho</groupId>
-        <artifactId>tycho-p2-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-p2-metadata</id>
-            <phase>package</phase>
-            <goals>
-              <goal>p2-metadata</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
     </plugins>
   </build>
 </project>
