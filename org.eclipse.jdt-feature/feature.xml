@@ -19,6 +19,17 @@
       %license
    </license>
 
+   <requires>
+      <import plugin="junit-jupiter-api" version="6" match="compatible"/>
+      <import plugin="junit-jupiter-engine" version="6" match="compatible"/>
+      <import plugin="junit-jupiter-params" version="6" match="compatible"/>
+      <import plugin="junit-platform-commons" version="6" match="compatible"/>
+      <import plugin="junit-platform-engine" version="6" match="compatible"/>
+      <import plugin="junit-platform-launcher" version="6" match="compatible"/>
+      <import plugin="junit-platform-suite-api" version="6" match="compatible"/>
+      <import plugin="junit-platform-suite-engine" version="6" match="compatible"/>
+   </requires>
+
    <plugin
          id="org.eclipse.jdt"
          version="0.0.0"/>
