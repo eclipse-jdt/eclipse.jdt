@@ -52,6 +52,7 @@ The CategoryPublisher had no such issues, it will update the previous result inl
 
 ## User facing text
 The following files contain strings like "Java 25", which need to be updated to the correct version with or without the "(BETA)" suffix.
+* [build_composite.xml](https://github.com/eclipse-jdt/eclipse.jdt/blob/BETA_JAVA25/org.eclipse.jdt.releng/patchbuild/build_composite.xml)
 * [builder/build.properties.in](https://github.com/eclipse-jdt/eclipse.jdt/blob/BETA_JAVA25/org.eclipse.jdt.releng/patchbuild/builder/build.properties.in)
 * [src/org.eclipse.jdt.javanextpatch/feature.properties](https://github.com/eclipse-jdt/eclipse.jdt/blob/BETA_JAVA25/org.eclipse.jdt.releng/patchbuild/src/org.eclipse.jdt.javanextpatch/feature.properties)
 * [src/category.xml](https://github.com/eclipse-jdt/eclipse.jdt/blob/BETA_JAVA25/org.eclipse.jdt.releng/patchbuild/src/category.xml)

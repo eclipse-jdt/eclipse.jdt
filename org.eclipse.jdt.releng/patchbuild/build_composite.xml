@@ -2,7 +2,7 @@
 	<target name="addChild">
 		<echo message="child=${child}"/>
 		<p2.composite.repository>
-			<repository compressed="false" location="." name="The Eclipse Project Updates for Java 25"/>
+			<repository compressed="false" location="." name="The Eclipse Project Updates for Java 26 (BETA)"/>
 			<add><repository location="${child}"/></add>
 		</p2.composite.repository>
 	</target>
