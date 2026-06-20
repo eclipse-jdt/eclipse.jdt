@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.jdt.javanextpatch"
       label="%featureName"
-      version="1.26.0.qualifier"
+      version="1.27.0.qualifier"
       provider-name="%providerName">
 
    <description>
@@ -18,24 +18,24 @@
    </license>
 
    <requires>
-      <import feature="org.eclipse.jdt" version="3.20.300.vSDKTIMESTAMP" patch="true"/>
+      <import feature="org.eclipse.jdt" version="3.20.700.vSDKTIMESTAMP" patch="true"/>
    </requires>
 
    <plugin
          id="org.eclipse.jdt.core"
-         version="3.45.50.qualifier"/>
+         version="3.46.150.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.core.compiler.batch"
-         version="3.45.50.qualifier"/>
+         version="3.46.150.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.ui"
-         version="3.37.50.qualifier"/>
+         version="3.38.150.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.core.manipulation"
-         version="1.24.50.qualifier"/>
+         version="1.24.250.qualifier"/>
 
 <!-- no longer needs changes in beta branches: 
    <plugin
@@ -45,7 +45,7 @@
 
    <plugin
          id="org.eclipse.jdt.launching"
-         version="3.24.150.qualifier"/>
+         version="3.24.350.qualifier"/>
 
 <!--
    <plugin
