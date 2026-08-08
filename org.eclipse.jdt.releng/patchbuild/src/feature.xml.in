@@ -23,7 +23,7 @@
 
    <plugin
          id="org.eclipse.jdt.core"
-         version="3.46.150.qualifier"/>
+         version="3.47.50.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.core.compiler.batch"
@@ -31,11 +31,11 @@
 
    <plugin
          id="org.eclipse.jdt.ui"
-         version="3.38.150.qualifier"/>
+         version="3.39.50.qualifier"/>
 
    <plugin
          id="org.eclipse.jdt.core.manipulation"
-         version="1.24.250.qualifier"/>
+         version="1.25.50.qualifier"/>
 
 <!-- no longer needs changes in beta branches: 
    <plugin
