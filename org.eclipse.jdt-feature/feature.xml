@@ -123,4 +123,8 @@
          id="org.eclipse.ant.launching"
          version="0.0.0"/>
 
+   <plugin
+         id="org.eclipse.ant.remote"
+         version="0.0.0"/>
+
 </feature>
