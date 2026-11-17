@@ -5,7 +5,7 @@
    </feature>
    <category-def name="Eclipse Java Development Tools" label="Eclipse Java Development Tools">
       <description>
-         Patch features for updating JDT to support development with Java 27.
+         Patch features for updating JDT to support development with Java 28 (BETA).
       </description>
    </category-def>
 </site>
